@@ -34,7 +34,7 @@ working:
 Salt Sandbox has been designed for and tested with Vagrant base boxes
 running:
 
-* CentOS 5.7
+* CentOS 6
 * Ubuntu 10.04 - Lucid Lynx
 
 ...although it may work just fine with other distributions/versions.
@@ -47,7 +47,7 @@ already, it will download a 64-bit CentOS 5.7 box for you), and then you
 should be good to clone this repo and go:
 
     $ vagrant box list
-    centos57
+    centos6
     $ git clone git://github.com/elasticdog/salt-sandbox.git
     $ cd salt-sandbox/
 
