@@ -18,7 +18,7 @@ Vagrant::Config.run do |config|
 
   config.vm.define :minion1 do |minion_config|
     minion_config.vm.box = 'centos6'
-    master_config.vm.box_url = 'https://vagrant-centos-6.s3.amazonaws.com/centos-6.box'
+    minion_config.vm.box_url = 'https://vagrant-centos-6.s3.amazonaws.com/centos-6.box'
     minion_config.vm.host_name = "minion1.#{domain}"
     minion_config.vm.network :hostonly, '172.16.42.11'
 
@@ -30,7 +30,7 @@ Vagrant::Config.run do |config|
 
   config.vm.define :minion2 do |minion_config|
     minion_config.vm.box = 'centos6'
-    master_config.vm.box_url = 'https://vagrant-centos-6.s3.amazonaws.com/centos-6.box'
+    minion_config.vm.box_url = 'https://vagrant-centos-6.s3.amazonaws.com/centos-6.box'
     minion_config.vm.host_name = "minion2.#{domain}"
     minion_config.vm.network :hostonly, '172.16.42.12'
 
