@@ -25,6 +25,15 @@ class mirrors::yum {
     mode    => '0644',
     source  => 'puppet:///modules/mirrors/epel.repo',
   }
+  
+  file { 'RPM-GPG-KEY-EPEL-6':
+    ensure => present,
+    path => '/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6',
+    owner => root,
+    group => root,
+    mode => '0644',
+    source => 'puppet:///modules/mirrors/RPM-GPG-KEY-EPEL-6',
+  }
 
   exec { 'yum_makecache':
     command     => '/usr/bin/yum makecache',

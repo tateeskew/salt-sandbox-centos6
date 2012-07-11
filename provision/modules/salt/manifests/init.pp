@@ -16,13 +16,6 @@
 #   class { 'salt': }
 #
 class salt {
-  yumrepo {"epel":
-        baseurl  => "http://mirror.aarnet.edu.au/pub/epel/6/x86_64",
-        descr    => "Extra Packages for Enterprise Linux (EPEL)",
-        enabled  => 1,
-        gpgcheck => 1,
-        gpgkey   => "http://mirror.aarnet.edu.au/pub/epel/RPM-GPG-KEY-EPEL-6",
-  }
 
   package { 'salt-minion':
     ensure => latest,
